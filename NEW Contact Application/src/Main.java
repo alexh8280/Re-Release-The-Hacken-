@@ -5,15 +5,15 @@ import java.time.*;
 
 public class Main {
 	
-	static String name;
-	static String email;
-	static String phone;
-	static String website;
-
 	static ArrayList<Contact> contacts = new ArrayList<Contact>();
 
 	public static void main(String[] args) {
 		
+		String name;
+		String email;
+		String phone;
+		String website;
+		String dob;
 	
 		Scanner scan = new Scanner(System.in);
 
@@ -42,9 +42,7 @@ public class Main {
 
 				if (type.equals("person")) {
 
-//					String name;
-//					String email;
-//					String phone;
+
 					// LocalDateTime dob;
 
 					// DateFormat df = new SimpleDateFormat("dd/mm/yyyy");
@@ -56,14 +54,14 @@ public class Main {
 					System.out.print("Email address: ");
 					email = scan.nextLine();
 					System.out.print("Date of birth (MM/DD/YYYY): ");
-					// dob = scan.();
+					dob = scan.next();
 					System.out.print("Phone number: ");
 					phone = scan.nextLine(); // .verifyNumber()
 
 					// LocalDateTime createdAt = LocalDateTime.now();
 					// Calendar dob = df.getCalendar();
 
-					// new Person(name, email, dob, phone);
+					contacts.add(new Person(name, email, dob, phone));
 
 				}
 
@@ -71,9 +69,6 @@ public class Main {
 
 				else if (type.equals("organization")) {
 
-//					String name;
-//					String website;
-//					String phone;
 
 					scan.nextLine();
 					System.out.print("Name: ");
@@ -84,7 +79,7 @@ public class Main {
 					System.out.print("Phone number: ");
 					phone = scan.nextLine(); // .verifyNumber()
 
-					// new Organization(name, website, phone);
+					contacts.add(new Organization(name, website, phone));
 				}
 
 				// list option:
