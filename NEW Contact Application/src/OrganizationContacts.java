@@ -8,27 +8,30 @@ public class OrganizationContacts extends Contact {
 	
 	private String website;
 
-	public Contact(int contactId, int nextid, String name, String number, LocalDateTime createdAt, String website) {
-		super();
-		this.contactId = nextid++;
-		this.name = name;
-		this.number = number;
-		this.createdAt = LocalDateTime.now();
+	public OrganizationContacts(int contactId, String name, String number, LocalDateTime createdAt, String website) {
+		super(contactId, name, number, createdAt);
 		this.website = website;
 	}
-	
+
 	public String getWebsite() {
 		return website;
 	}
 
-
 	public void setWebsite(String website) {
 		this.website = website;
 	}
-	
-	public String generatecontactID() {
+
+public String generatecontactID() {
 		
-		return this.contactId + ":" + this.name + ":" + this.number + ":" + this.createdAt + ":" this.website;
+		return this.contactId + ":" + this.getName() + ":" + this.getNumber() + ":" + this.getCreatedAt() + ":" + this.getWebsite();
+	
 	}
 
-}
+	
+
+
+
+	
+
+	}
+
