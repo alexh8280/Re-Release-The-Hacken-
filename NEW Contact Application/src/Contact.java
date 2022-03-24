@@ -49,7 +49,7 @@ public class Contact {
 	}
 
 	public Contact(int contactId, String name, String number, LocalDateTime createdAt) {
-		super();
+//		super();
 		this.contactId = nextId++;
 		this.name = name;
 		this.number = number;

@@ -1,10 +1,12 @@
+import java.time.LocalDateTime;
 
 public class Person extends Contact {
 	
 	protected String email;
 	protected String dateOfBirth;
 	
-	public Person(String email, String dateOfBirth) {
+	public Person(int contactId, String name, String number, LocalDateTime createdAt, String email,
+			String dateOfBirth) {
 		super(contactId, name, number, createdAt);
 		this.email = email;
 		this.dateOfBirth = dateOfBirth;
@@ -24,8 +26,6 @@ public class Person extends Contact {
 
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
-		
-		//Tomas Test
 	}
 	
 	
