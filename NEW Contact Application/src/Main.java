@@ -45,10 +45,7 @@ public class Main {
 //					String name;
 //					String email;
 //					String phone;
-					// LocalDateTime dob;
-
-					// DateFormat df = new SimpleDateFormat("dd/mm/yyyy");
-					// df.getCalendar().setLenient(false);
+					
 
 					scan.nextLine();
 					System.out.print("Name: ");
