@@ -5,15 +5,9 @@ public class Person extends Contact {
 	protected String email;
 	protected String dateOfBirth;
 	
-	
-	
-	public Person(int contactId, String name, String number, LocalDateTime createdAt) {
+	public Person(int contactId, String name, String number, LocalDateTime createdAt, String email,
+			String dateOfBirth) {
 		super(contactId, name, number, createdAt);
-		
-	}
-
-	public Person(String email, String dateOfBirth) {
-		super();
 		this.email = email;
 		this.dateOfBirth = dateOfBirth;
 	}
