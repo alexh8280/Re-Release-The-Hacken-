@@ -5,7 +5,7 @@ public class Person extends Contact {
 	protected String dateOfBirth;
 	
 	public Person(String email, String dateOfBirth) {
-		super();
+		super(contactId, name, number, createdAt);
 		this.email = email;
 		this.dateOfBirth = dateOfBirth;
 	}
@@ -24,6 +24,8 @@ public class Person extends Contact {
 
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+		
+		//Tomas Test
 	}
 	
 	
