@@ -24,6 +24,8 @@ public class Person extends Contact {
 
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+		
+		//Tomas Test
 	}
 	
 	
