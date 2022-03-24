@@ -21,17 +21,6 @@ public class OrganizationContacts extends Contact {
 		this.website = website;
 	}
 
-public String generatecontactID() {
-		
-		return this.contactId + ":" + this.getName() + ":" + this.getNumber() + ":" + this.getCreatedAt() + ":" + this.getWebsite();
 	
-	}
-
-	
-
-
-
-	
-
 	}
 
