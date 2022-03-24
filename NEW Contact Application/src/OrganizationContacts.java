@@ -20,17 +20,6 @@ public class OrganizationContacts extends Contact {
 	public void setWebsite(String website) {
 		this.website = website;
 	}
-
-public String generatecontactID() {
-		
-		return this.contactId + ":" + this.getName() + ":" + this.getNumber() + ":" + this.getCreatedAt() + ":" + this.getWebsite();
-	
-	}
-
-	
-
-
-
 	
 
 	}
