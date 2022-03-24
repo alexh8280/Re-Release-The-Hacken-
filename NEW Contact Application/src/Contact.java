@@ -53,14 +53,15 @@ public class Contact {
 		this.contactId = nextId++;
 		this.name = name;
 		this.number = number;
-		this.createdAt = createdAt;
+		// Time Created will now generated here in the constructor
+		this.createdAt = createdAt.now();
 	}
 
 	boolean VerifyNumber(String number) {
 		if (number.length() == 12) {
 			return true;
 
-		}
+		}//Testing
 
 		else {
 
