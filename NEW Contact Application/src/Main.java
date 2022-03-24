@@ -4,11 +4,17 @@ import java.util.Scanner;
 import java.time.*;
 
 public class Main {
+	
+	static String name;
+	static String email;
+	static String phone;
+	static String website;
 
 	static ArrayList<Contact> contacts = new ArrayList<Contact>();
 
 	public static void main(String[] args) {
-
+		
+	
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Contact List Application");
@@ -36,9 +42,9 @@ public class Main {
 
 				if (type.equals("person")) {
 
-					String name;
-					String email;
-					String phone;
+//					String name;
+//					String email;
+//					String phone;
 					// LocalDateTime dob;
 
 					// DateFormat df = new SimpleDateFormat("dd/mm/yyyy");
@@ -65,9 +71,9 @@ public class Main {
 
 				else if (type.equals("organization")) {
 
-					String name;
-					String website;
-					String phone;
+//					String name;
+//					String website;
+//					String phone;
 
 					scan.nextLine();
 					System.out.print("Name: ");
@@ -112,9 +118,11 @@ public class Main {
 			System.out.println("Enter user ID to delete");
 			int input = scan.nextInt();
 			contacts.remove(input);
-
+			scan.close();
 			// exit option:
 			break;
+			
+			
 		}
 	}
 }
