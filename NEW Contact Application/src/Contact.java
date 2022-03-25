@@ -49,7 +49,6 @@ public class Contact {
 	}
 
 	public Contact(int contactId, String name, String number, LocalDateTime createdAt) {
-//		super();
 		this.contactId = nextId++;
 		this.name = name;
 		this.number = number;
@@ -61,14 +60,12 @@ public class Contact {
 		if (number.length() == 12) {
 			System.out.println("Number is valid");
 			return true;
-
-		}//Testing
+		}
 
 		else {
 
 			System.out.println("Not a Valid Number");
 			return false;
-
 		}
 	}
 }
