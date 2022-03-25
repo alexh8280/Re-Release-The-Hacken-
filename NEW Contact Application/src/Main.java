@@ -4,17 +4,17 @@ import java.util.Scanner;
 import java.time.*;
 
 public class Main {
-	
+
 	static ArrayList<Contact> contacts = new ArrayList<Contact>();
 
 	public static void main(String[] args) {
-		
+
 		String name;
 		String email;
 		String phone;
 		String website;
 		String dob;
-	
+
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Contact List Application");
@@ -53,14 +53,13 @@ public class Main {
 					phone = scan.nextLine();
 					Contact.verifyNumber(phone);
 
-					//contacts.add(new Person(name, email, dob, phone));
+					// contacts.add(new Person(name, email, dob, phone));
 
 				}
 
 				// organization
 
 				else if (type.equals("organization")) {
-
 
 					scan.nextLine();
 					System.out.print("Name: ");
@@ -72,10 +71,10 @@ public class Main {
 					phone = scan.nextLine();
 					Contact.verifyNumber(phone);
 
-					//contacts.add(new Organization(name, website, phone));
+					// contacts.add(new Organization(name, website, phone));
 				}
 			}
-			
+
 			// list option:
 			if (choice == 2) {
 				for (Contact contact : contacts) {
@@ -86,7 +85,7 @@ public class Main {
 			// count option:
 			if (choice == 3) {
 				System.out.println("The contact list has " + contacts.size() + " records");
-				}
+			}
 
 			// info option:
 			if (choice == 4) {
@@ -96,11 +95,10 @@ public class Main {
 				System.out.println("Enter user ID for more information");
 				int input = scan.nextInt();
 				// System.out.println(contact[input].toString);
-				}
 			}
-			
+
 			// delete option:
-			if (choice ==5) {
+			if (choice == 5) {
 				for (Contact contact : contacts) {
 					System.out.println(contact.getContactId() + ": " + contact.getName());
 				}
@@ -109,15 +107,15 @@ public class Main {
 				contacts.remove(input);
 				scan.close();
 			}
-		
+
 			// search option:
 			// insert code
-		
+
 			// exit option:
 			if (choice == 7) {
 				scan.close();
 				break;
-			}	
+			}
 		}
 	}
 }
