@@ -64,7 +64,7 @@ public class Contact {
 
 		else {
 
-			System.out.println("Not a Valid Number");
+			System.out.println("Not a valid number");
 			return false;
 		}
 	}
