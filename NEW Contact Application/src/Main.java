@@ -42,26 +42,18 @@ public class Main {
 
 				if (type.equals("person")) {
 
-
-					// LocalDateTime dob;
-
-					// DateFormat df = new SimpleDateFormat("dd/mm/yyyy");
-					// df.getCalendar().setLenient(false);
-
 					scan.nextLine();
 					System.out.print("Name: ");
 					name = scan.nextLine();
 					System.out.print("Email address: ");
 					email = scan.nextLine();
 					System.out.print("Date of birth (MM/DD/YYYY): ");
-					dob = scan.next();
+					dob = scan.nextLine();
 					System.out.print("Phone number: ");
-					phone = scan.nextLine(); // .verifyNumber()
+					phone = scan.nextLine();
+					Contact.verifyNumber(phone);
 
-					// LocalDateTime createdAt = LocalDateTime.now();
-					// Calendar dob = df.getCalendar();
-
-					contacts.add(new Person(name, email, dob, phone));
+					//contacts.add(new Person(name, email, dob, phone));
 
 				}
 
@@ -77,47 +69,55 @@ public class Main {
 					System.out.print("Website: ");
 					website = scan.nextLine();
 					System.out.print("Phone number: ");
-					phone = scan.nextLine(); // .verifyNumber()
+					phone = scan.nextLine();
+					Contact.verifyNumber(phone);
 
-					contacts.add(new Organization(name, website, phone));
-				}
-
-				// list option:
-
-				if (choice == 2) {
-					for (Contact contact : contacts) {
-						System.out.println(contact.getContactId() + ": " + contact.getName());
-					}
-				}
-
-				// count option:
-				if (choice == 3) {
-					System.out.println("The contact list has " + contacts.size() + " records");
-				}
-
-				// info option:
-				if (choice == 4) {
-					for (Contact contact : contacts) {
-						System.out.println(contact.getContactId() + ": " + contact.getName());
-					}
-					System.out.println("Enter user ID for more information");
-					int input = scan.nextInt();
-					// System.out.println(contact[input].toString);
+					//contacts.add(new Organization(name, website, phone));
 				}
 			}
+			
+			// list option:
+			if (choice == 2) {
+				for (Contact contact : contacts) {
+					System.out.println(contact.getContactId() + ": " + contact.getName());
+				}
+			}
+
+			// count option:
+			if (choice == 3) {
+				System.out.println("The contact list has " + contacts.size() + " records");
+				}
+
+			// info option:
+			if (choice == 4) {
+				for (Contact contact : contacts) {
+					System.out.println(contact.getContactId() + ": " + contact.getName());
+				}
+				System.out.println("Enter user ID for more information");
+				int input = scan.nextInt();
+				// System.out.println(contact[input].toString);
+				}
+			}
+			
 			// delete option:
-
-			for (Contact contact : contacts) {
-				System.out.println(contact.getContactId() + ": " + contact.getName());
+			if (choice ==5) {
+				for (Contact contact : contacts) {
+					System.out.println(contact.getContactId() + ": " + contact.getName());
+				}
+				System.out.println("Enter user ID to delete");
+				int input = scan.nextInt();
+				contacts.remove(input);
+				scan.close();
 			}
-			System.out.println("Enter user ID to delete");
-			int input = scan.nextInt();
-			contacts.remove(input);
-			scan.close();
+		
+			// search option:
+			// insert code
+		
 			// exit option:
-			break;
-			
-			
+			if (choice == 7) {
+				scan.close();
+				break;
+			}	
 		}
 	}
 }
