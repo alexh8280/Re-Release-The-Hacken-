@@ -73,6 +73,9 @@ public class Main {
 
 					// contacts.add(new Organization(name, website, phone));
 				}
+				
+				else {
+					System.out.println("Invalid contact type");
 			}
 
 			// list option:
