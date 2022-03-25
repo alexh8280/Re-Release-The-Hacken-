@@ -57,8 +57,9 @@ public class Contact {
 		this.createdAt = createdAt.now();
 	}
 
-	boolean VerifyNumber(String number) {
+	Static boolean verifyNumber(String number) {
 		if (number.length() == 12) {
+			System.out.println("Number is valid");
 			return true;
 
 		}//Testing
